@@ -791,6 +791,7 @@
         margin-bottom: 84px;
     }
     &__btn{
+        cursor: pointer;
         border: none;
         background-color: $accent;
         text-transform: uppercase;
@@ -890,4 +891,90 @@
                 }
             }
             }
+
+            .news{
+                text-align: center;
+                padding: 40px 0 ;
+                background: #F9F6E5;
+                &__item{
+                    margin: 0 4px;
+                    &:hover{
+                        
+                        .news__item-inner{
+            
+                            opacity: 1;
+                            
+                        }
+                        .news__item-link{
+                            opacity: 0;
+                        }
+                        
+                    }
+                }
+                &__title{
+                    line-height: 38px;
+                    color: $text-color;
+                    margin-bottom: 50px;
+                    &::after{
+                        background-color: $accent;
+                        
+                    }
+                }
+                &__item-img{
+                    height: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 4px;
+                    
+                   
+                }
+                &__item-inner{
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-style: solid;
+                    border-color: $accent;
+                    border-width: 12px;
+                    padding: 12px 14px;
+                    min-height: 444px;
+                    height: 100%;
+                    opacity: 0;
+                    transition: all .5s;
+                }
+                &__item-linkinside{
+                   
+                   text-align-last: left;
+                   padding: 10px 20px;
+                    position: absolute;
+                    margin-top: 320px;
+                    color: $bg-color;
+                    font-size: 18px;
+                    min-width: 275px;
+                    line-height: 21px;
+                    letter-spacing: 2px;
+                    background-color: $accent;
+                    @extend %robotocondensed-700;
+                }
+                
+                &__item-link{
+                    margin-bottom: 20px;
+                    opacity: 1;
+                    text-align: left;
+                    display: block;
+                    color: $text-color;
+                    font-size: 18px;
+                    padding: 10px 20px;
+                    min-width: 230px;
+                    line-height: 21px;
+                    letter-spacing: 2px;
+                    background-color: #fff;
+                    
+                    @extend %robotocondensed-700;
+                }
+
+                
+            }
+            
 
