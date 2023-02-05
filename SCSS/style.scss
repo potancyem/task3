@@ -1153,6 +1153,7 @@
     
     &__contacts{
         padding-top: 90px;
+        padding-bottom: 63px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1195,6 +1196,20 @@
         }
     }
     &__inner-btn{
-        background-color: red;
+        background-color: $bg-color;
+        height: 142px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+        h5{
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 2px;
+            @extend %robotocondensed-400;
+            color: $text-color;
+        }
     }
 }
