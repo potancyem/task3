@@ -1047,18 +1047,21 @@
 
 
 }
-
-.testimonial-inner {
-    text-align: center;
-    min-height: 50px;
-    padding-top: 60px;
-
-    &__logo {
-
-        margin-bottom: 95px;
-        align-items: center
+.testimonial{
+    padding-bottom: 85px;
+    &-inner {
+        text-align: center;
+        min-height: 50px;
+        padding-top: 60px;
+    
+        &__logo {
+    
+            margin-bottom: 95px;
+            align-items: center
+        }
     }
 }
+
 
 .bot-slider {
     //min-height: 300px;
@@ -1126,26 +1129,72 @@
 }
 
 .footer {
-    text-align: center;
-
-    &__inner {
+    position: relative;
+    background-color: $accent;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &__logo{
+        background-color: $accent;
+        width: 85%;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: -30px;
+        border-radius: 3px;
+        img{        
+            width: 83px;
+            height: 55px;
+        }
+    }
+    
+    &__contacts{
+        padding-top: 90px;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-
+        text-align: center;
+        justify-content: center;
+        gap: 42px;
+        &-title{
+            h4{
+                font-size: 20px;
+            line-height: 22px;
+            letter-spacing: 2px;
+            color: #fff;
+            font-weight: 400;
+            }
+        }
+        &-links{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
     }
-
-    &__contacts {
-        background-color: $accent;
-        position: absolute;
-        margin-top: 100px;
+    &__descr{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &-title{
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 2px;
+            @extend %robotocondensed-700;
+        }
+        &-links{
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            line-height: 20px;
+        }
     }
-}
-
-.logo {
-    background-color: #2B4074;
-    padding: 0 75px;
-    position: relative;
-    margin-top: 40px;
+    &__inner-btn{
+        background-color: red;
+    }
 }
